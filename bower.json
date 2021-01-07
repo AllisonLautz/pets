@@ -1,0 +1,13 @@
+{
+  "name": "workshop",
+  "description": "Dev Workshop?",
+  "main": "index.js",
+  "authors": [
+    "Allison Lautz"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+  }
+}

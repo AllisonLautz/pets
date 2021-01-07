@@ -1,0 +1,15 @@
+// @import 'resets';
+@import 'vars';
+
+
+*{
+	box-sizing:border-box;
+	&:focus{outline:none;}
+}
+
+.column{
+	@include column;
+	label{
+		margin-bottom:5px;
+	}
+}

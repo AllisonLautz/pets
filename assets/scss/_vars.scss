@@ -1,0 +1,158 @@
+@import url("https://use.typekit.net/pqg1kjr.css");
+@import url('https://fonts.googleapis.com/css?family=Notable');
+
+
+$white:#ffffff;
+$black:#262729;
+$trueblack:#000;
+$gray:#989aa7;
+$graydk:#6e707f;
+
+$green:#a6cdba;
+$beige:#eee6d9;
+$grayish:#d2d8e8;
+
+$graylt:#f6f6f6;
+
+
+$blue:#a1bff3;
+$bluelt:#bee5ea;
+$green:#c2d16a;
+$yellow:#f4d362;
+$red:#e1797a;
+
+
+
+$bglight:#f7fbfe;
+$bgdark:#e3e8f1;
+
+
+$font:"sofia-pro",sans-serif;
+$x-light:200;
+$light:300;
+$normal:400;
+$bold:600;
+$x-bold:700;
+
+$title:"notable", sans-serif;
+
+$monitor: "(min-width: 1601px)";
+$desktop: "(max-width: 1600px)";
+$tablet: "(max-width: 1080px)";
+$mobile : "(max-width: 736px)";
+
+@mixin ease(){
+	transition: all .3s ease-in-out;
+}
+
+
+
+@mixin row($h:left, $v:stretch, $w:wrap){
+	display: flex;
+	flex-direction:row;
+	@if $h == "center"{
+		justify-content:center;
+	}
+	@else if $h == "left"{
+		justify-content:flex-start;
+	}
+	@else if $h == "right"{
+		justify-content:flex-end;
+	}
+
+	@else if $h == "between"{
+		justify-content:space-between;
+	}
+
+	@else if $h == "around"{
+		justify-content:space-around;
+	}
+
+	@else if $h == "evenly"{
+		justify-content:space-evenly;
+	}
+
+
+	@if $v == "stretch"{
+		align-items:stretch;
+	}
+	@else if $v == "top"{
+		align-items:flex-start;
+	}
+	@else if $v == "bottom"{
+		align-items:flex-end;
+	}
+	@else if $v == "center"{
+		align-items:center;
+	}
+
+	@else if $v == "baseline"{
+		align-items:baseline;
+	}
+
+	@if $w == "nowrap"{
+		flex-wrap:nowrap;
+	}
+
+	@else{
+		flex-wrap:wrap;
+	}
+}
+
+
+
+@mixin column($h:left, $v:stretch, $o:other){
+	display: flex;
+	flex-direction:column;
+	@if $h == "left"{
+		align-items:unset;
+	}
+	@else if $h == "center"{
+		align-items:center;
+	}
+	@else if $h == "right"{
+		align-items:flex-end;
+	}
+
+
+	@if $v == "stretch"{
+		justify-content:stretch;
+	}
+	@else if $v == "center"{
+		justify-content:center;
+	}
+	@else if $v == "top"{
+		justify-content:flex-start;
+	}
+	@else if $v == "bottom"{
+		justify-content:flex-end;
+	}
+	@else if $v == "between"{
+		justify-content:space-between;
+	}
+
+	@else if $v == "around"{
+		justify-content:space-around;
+	}
+
+
+
+	@if $o == "nowrap"{
+		flex-wrap:nowrap;
+	}
+
+	@else if $o == "center"{
+		text-align:center;
+	}
+
+	@else if $o == "nowrapcenter"{
+		flex-wrap:nowrap;
+		text-align:center;
+	}
+
+	@else{
+		flex-wrap:wrap;
+		
+	}
+
+}
