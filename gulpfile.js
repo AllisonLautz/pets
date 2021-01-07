@@ -13,7 +13,7 @@ var runSequence = require('run-sequence');
 
 gulp.task('browserSync', function() {
   browserSync.init({
-    proxy: 'localhost/workshop',
+    proxy: 'localhost/pets', /* change path here if root wp directory has a different name */
     open: 'external'
   });
 });
